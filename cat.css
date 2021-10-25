@@ -1,0 +1,132 @@
+.cat {
+  --cat-skin: black;
+  --fuzz: 0px 0px 5px black, inset 0px 0px 2px black;
+
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 5%;
+  width: 300px;
+  height: 300px;
+  background: pink;
+}
+.cat * {
+  position: absolute;
+}
+.cat-body {
+  background: var(--cat-skin);
+  top: 40%;
+  left: 23.5%;
+  width: 53%;
+  height: 50%;
+  border-radius: 100% 100% 80% 80%;
+  box-shadow: var(--fuzz);
+}
+
+.cat-face {
+  background: var(--cat-skin);
+  top: 10%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
+  border-radius: 70% 70% 60% 60%;
+  box-shadow: var(--fuzz);
+}
+
+.right-eye {
+  top: 45%;
+  left: 60%;
+  background: yellow;
+  width: 15%;
+  height: 17%;
+  border-radius: 50%;
+}
+.right-pupil {
+  top: 50%;
+  left: 65%;
+  background: black;
+  width: 7%;
+  height: 7%;
+  border-radius: 100%;
+}
+
+.left-eye {
+  top: 45%;
+  left: 20%;
+  background: yellow;
+  width: 15%;
+  height: 17%;
+  border-radius: 50%;
+}
+.left-pupil {
+  top: 50%;
+  right: 70%;
+  background: black;
+  width: 7%;
+  height: 7%;
+  border-radius: 100%;
+}
+
+.blink {
+  background-color: var(--cat-skin);
+  position: relative;
+  top: 15%;
+  left: 36%;
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  animation-name: blink;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  98% {
+    top: 15%;
+  }
+
+  100% {
+    top: 27%;
+  }
+}
+
+.right-ear {
+  top: 3.5%;
+  right: 2.5%;
+  width: 0%;
+  height: 0%;
+  border-top: 45px solid var(--cat-skin);
+  border-left: 35px solid transparent;
+  border-radius: 10%;
+  box-shadow: var(--fuzz);
+}
+
+.left-ear {
+  top: 3.5%;
+  left: 2.5%;
+  width: 0;
+  height: 0;
+  border-top: 45px solid var(--cat-skin);
+  border-right: 35px solid transparent;
+  border-radius: 10%;
+  box-shadow: var(--fuzz);
+}
+
+.nose {
+  top: 60%;
+  left: 45%;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid pink;
+}
+
+.tail {
+  background: var(--cat-skin);
+  top: 80%;
+  left: 5%;
+  width: 62%;
+  height: 10%;
+  border-radius: 80% 60% 60% 80%;
+  box-shadow: var(--fuzz);
+}
